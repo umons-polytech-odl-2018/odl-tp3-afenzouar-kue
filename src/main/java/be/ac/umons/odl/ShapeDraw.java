@@ -36,6 +36,12 @@ public class ShapeDraw {
 				} else if (squareBtn.isSelected()) {
 					((DrawingPanel) drawingArea).addDrawable(new Square(start, Math.min(end.getX() - start.getX(), end.getY() - start.getY())));
 				}
+				else if (ellipsisBtn.isSelected()){
+					((DrawingPanel) drawingArea).addDrawable(new Ellipsis(end, end.getX() - start.getX(), end.getY() - start.getY()));
+				}
+				else if(circleBtn.isSelected()){
+					((DrawingPanel) drawingArea).addDrawable(new Circle(end, end.getX() - start.getX()));
+				}
 				drawingArea.repaint();
 			}
 		});
